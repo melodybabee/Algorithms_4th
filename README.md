@@ -1,9 +1,9 @@
-#Algorithms_4th
+# Algorithms_4th
 Notes and Exercises of Algorithms_4th from Princeton University.
 
-##Union Find
+## Union Find
 
-###Dynamic connectivity
+### Dynamic connectivity
 
 - Union command: connect two objects.
 - Find/ Connected query: to determin whether there is a path connecting the two objects.
@@ -15,7 +15,7 @@ Notes and Exercises of Algorithms_4th from Princeton University.
     
     - Transitive : p is connected to q, q is connected to r. So p is p is connected to r.
 
-###Quick Find
+### Quick Find
 
 - Firstly, there is an id array which is the initial status of every node. If we call union command, it will connect one with the other, then change the entry of the second node to the entry as the first one.
 E.g, union(6,5) means connectiong 6 and 5, and changing 6 to 5 as entry.
@@ -48,7 +48,7 @@ E.g, union(6,5) means connectiong 6 and 5, and changing 6 to 5 as entry.
 			}
 		}
 		
-###Quick Union
+### Quick Union
 - Using the same data structure but array represents a set of trees that's called a forest. The value in the array means the parent of this current node.
 - Find: check if p and q have the same root.
 - To merge components containing p and q, set the id of p's root to the id of q's root.
@@ -86,6 +86,6 @@ E.g, union(6,5) means connectiong 6 and 5, and changing 6 to 5 as entry.
 		}
 - the find operation complexity is linear.
 
-###Weighting
+### Weighting
 - To improve the complexity of quick find and quick union.
 - Make sure that the smaller tree goes down below.
